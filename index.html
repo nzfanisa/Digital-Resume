@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home — Nazifa</title>
+
+<style>
+:root{
+  --accent:#e66fb4;
+  --card:#fff0f7;
+  --muted:#777;
+}
+
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Inter, Arial, sans-serif;
+  background:url('bg 2.jpg') center/cover no-repeat fixed;
+}
+
+
+.layout{display:flex;min-height:100vh;}
+
+.sidebar{
+  width:260px;
+  padding:28px;
+  background:linear-gradient(180deg,#ffffff,#f1f6fb);
+  position:sticky;
+  top:0;
+}
+
+.avatar{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:url('passport pic.jpg') center/cover no-repeat;
+  margin-bottom:14px;
+}
+
+.dropbtn{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.menu{display:none;margin-top:8px;}
+.menu a{
+  display:block;
+  padding:8px;
+  text-decoration:none;
+  color:#111;
+}
+.menu a:hover{background:#ffe0f0;}
+
+.navbtn{
+  width:100%;
+  padding:12px;
+  margin-top:8px;
+  border-radius:16px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ffd1e8,#ff9ad0);
+}
+.navbtn:hover{opacity:0.9;}
+
+.content{flex:1;padding:40px;}
+
+.card{
+  background:var(--card);
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+  margin-bottom:40px;
+  text-align:center;
+}
+
+.welcome-text{
+  color:gray;
+  font-size:1.4em;
+  margin-bottom:20px;
+}
+
+
+.featured-title{
+  text-align:center;
+  font-size:1.6em;
+  color:black;
+  margin-bottom:26px;
+  display:inline-block;
+  position:relative;
+}
+
+.featured-title::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:3px;
+  background:#e66fb4;
+  animation:expandUnderline 1s forwards;
+}
+
+@keyframes expandUnderline{
+  from{width:0}
+  to{width:100%}
+}
+
+.featured-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.feature-card{
+  background:#fff0f7;
+  border-radius:22px;
+  padding:32px;
+  text-align:center;
+  text-decoration:none;
+  color:#333;
+  box-shadow:0 10px 22px rgba(230,111,180,0.25);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.feature-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 16px 30px rgba(230,111,180,0.35);
+}
+
+.feature-icon{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ffd1e8,#ff9ad0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  margin:0 auto 18px;
+}
+
+
+.footer{
+  text-align:center;
+  margin-top:40px;
+  color:#777;
+  font-size:14px;
+}
+
+.clock{
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+
+@media(max-width:800px){
+  .layout{flex-direction:column;}
+  .sidebar{width:100%;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="avatar"></div>
+  <h1 style="font-style:italic;">Nazifa Nisa</h1>
+
+  <div class="dropwrap">
+    <button class="dropbtn" id="socialToggle">
+      <span>Contact Me</span>
+      <span>▼</span>
+    </button>
+    <nav class="menu" id="socialMenu">
+      <a href="https://wa.me/60182898665/" target="_blank">Whatsapp</a>
+      <a href="https://www.instagram.com/nzfanisa/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/nzfa.nisa" target="_blank">Facebook</a>
+      <a href="https://x.com/nzfanisa" target="_blank">X</a>
+    </nav>
+  </div>
+
+  <a href="index.html"><button class="navbtn">Home</button></a>
+  <a href="biography.html"><button class="navbtn">Biography</button></a>
+  <a href="education.html"><button class="navbtn">Education</button></a>
+  <a href="family.html"><button class="navbtn">Family</button></a>
+  <a href="experience.html"><button class="navbtn">Experience</button></a>
+  <a href="gallery.html"><button class="navbtn">Gallery</button></a>
+</aside>
+
+<main class="content">
+
+  
+  <section class="card">
+    <h2 class="welcome-text">
+      Welcome to My Digital Resume ✨  
+      A place where I share my journey, skills and experiences.
+    </h2>
+  </section>
+
+ 
+  <section>
+    <h2 class="featured-title">Explore My Portfolio</h2>
+
+    <div class="featured-grid">
+      <a href="biography.html" class="feature-card">
+        <div class="feature-icon">👩‍💼</div>
+        <h3>Biography</h3>
+        <p>Get to know me and my background.</p>
+      </a>
+
+      <a href="education.html" class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3>Education</h3>
+        <p>My academic journey.</p>
+      </a>
+
+      <a href="family.html" class="feature-card">
+        <div class="feature-icon">👨‍👩‍👧‍👦</div>
+        <h3>Family</h3>
+        <p>The people who support me.</p>
+      </a>
+
+      <a href="experience.html" class="feature-card">
+        <div class="feature-icon">💼</div>
+        <h3>Experience</h3>
+        <p>Internship experience.</p>
+      </a>
+
+      <a href="gallery.html" class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3>Gallery</h3>
+        <p>Moments & memories.</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="clock" id="clock"></div>
+    © 2025 Nazifa Nisa
+  </div>
+
+</main>
+</div>
+
+<iframe 
+  src="player.html"
+  style="position:fixed;bottom:0;right:0;width:260px;height:120px;border:none;z-index:9999;">
+</iframe>
+
+<script>
+document.getElementById('socialToggle').onclick=function(){
+  const m=document.getElementById('socialMenu');
+  m.style.display=(m.style.display==='block')?'none':'block';
+};
+
+
+function updateClock(){
+  const now=new Date();
+  document.getElementById('clock').innerText=
+    now.toLocaleDateString()+' • '+now.toLocaleTimeString();
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

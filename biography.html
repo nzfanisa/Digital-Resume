@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biography — Nazifa</title>
+
+<style>
+:root{
+  --accent:#e66fb4;
+  --card:#fff0f7;
+  --muted:#a65f87;
+}
+
+
+*{box-sizing:border-box}
+
+
+body{
+  margin:0;
+  font-family:Inter, Arial, sans-serif;
+  background:url('bg 2.jpg') center/cover no-repeat fixed;
+}
+
+
+.layout{display:flex;min-height:100vh}
+
+
+.sidebar{
+  width:260px;
+  padding:28px;
+  background:linear-gradient(180deg,#ffffff,#f1f6fb);
+  position:sticky;
+  top:0;
+}
+
+.avatar{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background: url('passport pic.jpg') center/cover no-repeat;
+  margin-bottom:14px;
+}
+
+
+.dropbtn{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.menu{
+  display:none;
+  margin-top:8px;
+}
+
+.menu a{
+  display:block;
+  padding:8px;
+  text-decoration:none;
+  color:#111;
+}
+
+.menu a:hover{background:#ffe0f0}
+
+
+.navbtn{
+  width:100%;
+  padding:12px;
+  margin-top:8px;
+  border-radius:16px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  background:linear-gradient(135deg,#ffd1e8,#ff9ad0);
+}
+
+
+.content{flex:1;padding:40px}
+
+
+.card{
+  background:var(--card);
+  padding:26px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+
+ 
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+.bio-pic{
+  width:350px;
+  height:350px;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  margin:0 auto 20px;
+  border:6px solid #ffd1e8;
+  box-shadow:0 6px 14px rgba(230,111,180,.35);
+
+  opacity:0;
+  transform:scale(.9);
+  transition:all .8s ease .3s;
+}
+.bio-pic.show{
+  opacity:1;
+  transform:scale(1);
+}
+
+
+.bio-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.bio-table th{
+  width:28%;
+  padding:18px;
+  text-align:left;
+  vertical-align:top;
+  background:#ffe0f0;
+  color:#a65f87;
+  border-bottom:1px solid #f3c6dd;
+}
+
+.bio-table td{
+  padding:18px;
+  line-height:1.8;
+  border-bottom:1px solid #eee;
+}
+
+.bio-table tr:last-child th,
+.bio-table tr:last-child td{border-bottom:none}
+
+
+.bio-table tr{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .7s ease;
+}
+.bio-table tr.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+.skill-list{padding-left:20px;list-style:disc}
+.skill-list li{margin-bottom:6px}
+
+.exp-list{padding-left:22px}
+.exp-list li{margin-bottom:14px}
+
+
+.skill-bar{
+  background:#ffe0f0;
+  border-radius:10px;
+  height:12px;
+  overflow:hidden;
+  margin-top:6px;
+  position:relative;
+}
+.skill-fill{
+  width:0;
+  height:100%;
+  background:#e66fb4;
+  border-radius:10px;
+  transition:width 1.2s ease;
+}
+
+
+@media(max-width:800px){
+  .layout{flex-direction:column}
+  .sidebar{width:100%}
+  .bio-pic{width:90%;height:auto}
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+
+<aside class="sidebar">
+  <div class="avatar"></div>
+  <h1 style="font-style:italic;">Nazifa Nisa</h1>
+
+  <button class="dropbtn" onclick="toggleMenu()">
+    <span>Contact Me</span><span>▼</span>
+  </button>
+  <nav class="menu" id="socialMenu">
+    <a href="https://wa.me/60182898665/" target="_blank">Whatsapp</a>
+    <a href="https://www.instagram.com/nzfanisa/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/nzfa.nisa" target="_blank">Facebook</a>
+    <a href="https://x.com/nzfanisa" target="_blank">X</a>
+  </nav>
+
+  <a href="index.html"><button class="navbtn">Home</button></a>
+  <a href="biography.html"><button class="navbtn">Biography</button></a>
+  <a href="education.html"><button class="navbtn">Education</button></a>
+  <a href="family.html"><button class="navbtn">Family</button></a>
+  <a href="experience.html"><button class="navbtn">Experience</button></a>
+  <a href="gallery.html"><button class="navbtn">Gallery</button></a>
+</aside>
+
+
+<main class="content">
+
+<section class="card reveal">
+  <h2>Biography</h2>
+
+  <img src="my image.jpg" class="bio-pic reveal-img">
+
+  <table class="bio-table">
+
+    <tr class="reveal-row">
+      <th>About Me</th>
+      <td>
+        Hi! My name is Nur Nazifa Nisa binti Nazi Asmi. I am 20 years old and I live in
+        Pusat Bandar Puchong, Selangor. I am an Information Management graduate with
+        strong interest in managing, organizing and maintaining information effectively.
+        During my internship, I gained hands-on experience in handling data, records
+        and administrative tasks. I am detail-oriented, responsible and eager to grow
+        professionally in a supportive environment.
+      </td>
+    </tr>
+
+    <tr class="reveal-row">
+      <th>Skills Proficiency</th>
+      <td>
+        <div style="margin-bottom:12px;">
+          <span>Information & Records Management</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+          <span style="float:right;">90%</span>
+        </div>
+        <div style="margin-bottom:12px;">
+          <span>Data Entry & Documentation</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+          <span style="float:right;">85%</span>
+        </div>
+        <div style="margin-bottom:12px;">
+          <span>Microsoft Word, Excel & PowerPoint</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+          <span style="float:right;">80%</span>
+        </div>
+        <div style="margin-bottom:12px;">
+          <span>Basic HTML & CSS</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+          <span style="float:right;">70%</span>
+        </div>
+        <div style="margin-bottom:12px;">
+          <span>Teamwork & Time Management</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+          <span style="float:right;">75%</span>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="reveal-row">
+      <th>Experience & Projects</th>
+      <td>
+        <ol class="exp-list">
+          <li><strong>Internship – KAC Advisory Services</strong></li>
+          <li><strong>Digital Resume Website</strong></li>
+          <li><strong>Academic Information Management Projects</strong></li>
+        </ol>
+      </td>
+    </tr>
+
+  </table>
+</section>
+
+
+  <div class="footer">
+    <div class="clock" id="clock"></div><center>
+    © 2025 Nazifa Nisa
+  </div>
+</main>
+</div>
+
+<script>
+function toggleMenu(){
+  const m=document.getElementById("socialMenu");
+  m.style.display=(m.style.display==="block")?"none":"block";
+}
+
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+      const fills = entry.target.querySelectorAll(".skill-fill");
+      fills.forEach(f=>{
+        const width = f.getAttribute("data-width");
+        f.style.width=width;
+      });
+    }
+  });
+},{threshold:0.2});
+
+document.querySelectorAll(".card").forEach(el=>observer.observe(el));
+document.querySelectorAll(".bio-pic").forEach(el=>observer.observe(el));
+document.querySelectorAll(".bio-table tr").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
